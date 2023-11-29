@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the container horizontally */
+            margin: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar {
+            flex-basis: 300px;
+            padding: 20px;
+            background-color: #ddd;
+        }
+    </style>
+
+
+
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Applicant Registation</h2>
+            <p>This is the main content of your website. You can add text, images, and other elements here.</p>
+        </div>
+
+        <div class="main-content">
+            
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+    <div class="site-footer">
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-3 mr-auto">
+          <div class="widget">
+            <h3>About Us<span class="text-primary">.</span> </h3>
+            <p>Your satisfaction is our priority. Our client-centric approach means that we listen to your needs, communicate transparently, and go the extra mile to exceed your expectations.</p>
+          </div> <!-- /.widget -->
+          <div class="widget">
+            <h3>Connect</h3>
+            <ul class="list-unstyled social">
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="#"><span class="icon-pinterest"></span></a></li>
+              <li><a href="#"><span class="icon-dribbble"></span></a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+
+        <div class="col-lg-3">
+          <div class="widget">
+            <h3>Gallery</h3>
+            <ul class="instafeed instagram-gallery list-unstyled">
+                <li><a class="instagram-item" href="{% static 'images/gal_1.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_1.jpg' %}" alt="" width="72" height="72"></a> </li>
+                <li><a class="instagram-item" href="{% static 'images/gal_2.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_2.jpg' %}" alt="" width="72" height="72"></a> </li>
+                <li><a class="instagram-item" href="{% static 'images/gal_3.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_3.jpg' %}" alt="" width="72" height="72"></a> </li>
+                <li><a class="instagram-item" href="{% static 'images/gal_4.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_4.jpg' %}" alt="" width="72" height="72"></a> </li>
+                <li><a class="instagram-item" href="{% static 'images/gal_5.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_5.jpg' %}" alt="" width="72" height="72"></a> </li>
+                <li><a class="instagram-item" href="{% static 'images/gal_6.jpg' %}" data-fancybox="gal"><img src="{% static 'images/gal_6.jpg' %}" alt="" width="72" height="72"></a> </li>
+
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+
+        <div class="col-lg-3">
+          <div class="widget">
+            <h3>Contact</h3>
+            <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+            <ul class="list-unstyled links mb-4">
+              <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+              <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+              <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+            </ul>
+          </div> <!-- /.widget -->
+        </div> <!-- /.col-lg-3 -->
+
+      </div> <!-- /.row -->
+
+
+      </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/jquery.sticky.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+{% endblock %}

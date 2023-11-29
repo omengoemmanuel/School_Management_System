@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+     <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+     <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+
+    <style>
+        .hello-msg{
+            font-size: 18px;
+            color: #fff;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<span class="hello-msg"> Hello {{ request.user }}</span>
+    <span>  <a class="hello-msg" href="{% url 'loginpage' %}">Logout</a> </span>
+
+<body id="bg" style="background-image: url('{% static 'images/back.jpg' %}");">
+
+
+<input type="checkbox" id="check" >
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+
+<div class="sidebar">
+    <header> My Dashboard</header>
+
+    <ul>
+        <li><a href=""><i class="fas fa-qrcode"></i>My Group Chat</a> </li>
+        <li><a href=""><i class="fas fa-slider-h"></i>Dashboard </a> </li>
+        <li><a href=""><i class="fas fa-qrcode"></i>  Clearence</a> </li>
+        <li><a href=""><i class="fas fa-envelope"></i>Fees </a> </li>
+        <li><a href=""><i class="fas fa-qrcode"></i>Online Reporting </a> </li>
+        <li><a href=""><i class="fas fa-slider-h"></i> Unit Registration</a> </li>
+        <li><a href=""><i class="fas fa-qrcode"></i> Exam Card</a> </li>
+        <li><a href=""><i class="fas fa-qrcode"></i> My assignments</a> </li>
+        <li><a href=""><i class="fas fa-qrcode"></i> My Attachment </a> </li>
+        <li><a href=""><i class="fas fa-slider-h"></i> Student Forms</a> </li>
+        <li><a href=""><i class="fas fa-envelope"></i>Exam Booking</a> </li>
+
+    </ul>
+    <section id="class">
+
+    </section>s
+
+</div>
+</body>
+</html>
