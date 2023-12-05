@@ -109,6 +109,9 @@ def messageinsert(request):
 def student(request):
     return render(request, 'student.html')
 
+def enroll(request):
+    return render(request, 'enroll.html')
+
 # class SignUp(CreateView):
 #   model = CustomUser
 #  form_class = CustomUserCreationForm

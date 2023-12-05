@@ -1,64 +1,77 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block body %}
+<body>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<body>
 
-        header, footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
+<div class="container mt-5">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="field1">Full Name</label>
+        <input type="text" class="form-control" id="field1" placeholder="Enter Your Full Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="field2">Email Address</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter your Email Address">
+      </div>
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the container horizontally */
-            margin: 20px;
-        }
+         <div class="form-group col-md-6">
+        <label for="field2">Field 3</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #f2f2f2;
-        }
+         <div class="form-group col-md-6">
+        <label for="field2">Field 4</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
-        .sidebar {
-            flex-basis: 300px;
-            padding: 20px;
-            background-color: #ddd;
-        }
-    </style>
+         <div class="form-group col-md-6">
+        <label for="field2">Field 5</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
+         <div class="form-group col-md-6">
+        <label for="field2">Field 6</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
+         <div class="form-group col-md-6">
+        <label for="field2">Field 7</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
-    
-    <div class="container">
-        <div class="sidebar">
-            <h2>Applicant Registation</h2>
-            <p>This is the main content of your website. You can add text, images, and other elements here.</p>
-        </div>
+         <div class="form-group col-md-6">
+        <label for="field2">Field 8</label>
+        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+      </div>
 
-        <div class="main-content">
-            
-
-        </div>
     </div>
 
+    <!-- Repeat the above div for the remaining 12 fields -->
 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js (optional, but required for some Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
 
-    <div class="site-footer">
+
+<!-- Bootstrap JS and Popper.js (optional, but required for some Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<div class="site-footer">
 
 
     <div class="container">
@@ -124,14 +137,7 @@
       </div>
     </div>
 
-</body>
-
-</html>
-
-
-
-
-     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
@@ -141,4 +147,8 @@
 <script src="{% static 'js/jquery.sticky.js' %}"></script>
 <script src="{% static 'js/aos.js' %}"></script>
 <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+
+  </html>
 {% endblock %}
