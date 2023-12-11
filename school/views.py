@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import messagess, gallery, staffs
+from .models import enroll
 
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -105,9 +106,36 @@ def messageinsert(request):
     return redirect("/contact")
 
 
+def enrollinsert(request):
+    if request.method == "POST":
+        fname = request.POST.get('fname')
+        mail = request.POST.get('mail')
+        address = request.POST.get('address')
+        pno = request.POST.get('pno')
+        nid = request.POST.get('nid')
+        gender = request.POST.get('gender')
+        yoe = request.POST.get('yoe')
+        coursecate = request.POST.get('coursecate')
+        tcourse = request.POST.get('tcourse')
+        upbirth = request.POST.get('upbirth')
+        upid = request.POST.get('upid')
+        upkcse = request.POST.get('upkcse')
+
+        if len(request.FILES) != 0:
+            upbirth = request.FILES['upbirth']
+            upid = request.FILES['upid']
+            upkcse = request.FILES['upkcse']
+        query = enroll(fname=fname, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
+                       coursecate=coursecate, tcourse=tcourse, upbirth=upbirth, upid=upid, upkcse=upkcse)
+        query.save()
+
+    return redirect("/enroll")
+
+
 @login_required(login_url='loginpage')
 def student(request):
     return render(request, 'student.html')
+
 
 def enroll(request):
     return render(request, 'enroll.html')

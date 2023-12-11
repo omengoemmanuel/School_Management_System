@@ -15,6 +15,7 @@ urlpatterns = [
     path('enroll', views.enroll),
     path('messageinsert', views.messageinsert, name="messageinsert"),
     path('student', views.student, name="student"),
-    path('enroll', views.enroll, name="enroll")
+    path('enroll', views.enroll, name="enroll"),
+    path('enrollinsert', views.enrollinsert, name="enrollinsert")
 
 ]

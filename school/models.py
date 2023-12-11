@@ -27,12 +27,26 @@ class staffs(models.Model):
         return self.name
 
 
-#class CustomUser(AbstractUser):
-   # f_name = models.CharField(max_length=20, blank=False, null=False)
-    #m_name = models.CharField(max_length=20, blank=False, null=False)
-    #dep = models.CharField(max_length=20, blank=False, null=False)
-    #hcounty = models.CharField(max_length=20, blank=False, null=False)
-    #hscounty = models.CharField(max_length=30, blank=False, null=False)
-    #id_no = models.PositiveIntegerField(blank=False, null=False)
-    #regno = models.CharField(max_length=20, blank=False, null=False)
-    #phone = models.PositiveIntegerField(blank=False, null=False)
+class enroll(models.Model):
+    fname = models.CharField(max_length=50, blank=False, null=False)
+    mail = models.EmailField(blank=False, null=False)
+    address = models.CharField(max_length=100, null=False, blank=False)
+    pno = models.IntegerField(null=False, blank=False)
+    nid = models.IntegerField(null=False, blank=False)
+    gender = models.CharField(max_length=6, blank=False, null=False)
+    yoe = models.IntegerField(blank=False, null=False)
+    coursecate = models.CharField(max_length=150, null=False, blank=False)
+    tcourse = models.CharField(max_length=100, null=False, blank=False)
+    upbirth = models.FileField(upload_to="upload/enrolls", default="upload/enroll/birth.pdf")
+    upid = models.FileField(upload_to="upload/enrolls", default="upload/enroll/id.pdf")
+    upkcse = models.FileField(upload_to="upload/enrolls", default="upload/enroll/kcse.pdf")
+
+# class CustomUser(AbstractUser):
+# f_name = models.CharField(max_length=20, blank=False, null=False)
+# m_name = models.CharField(max_length=20, blank=False, null=False)
+# dep = models.CharField(max_length=20, blank=False, null=False)
+# hcounty = models.CharField(max_length=20, blank=False, null=False)
+# hscounty = models.CharField(max_length=30, blank=False, null=False)
+# id_no = models.PositiveIntegerField(blank=False, null=False)
+# regno = models.CharField(max_length=20, blank=False, null=False)
+# phone = models.PositiveIntegerField(blank=False, null=False)

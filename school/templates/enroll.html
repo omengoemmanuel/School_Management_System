@@ -1,59 +1,131 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block body %}
-<body>
 
+<style>
+.form1{
+    max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+input{
+      width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.opt_1{
+        width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+label{
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+button{
+    background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
 <body>
+<div class="form1">
 
 <div class="container mt-5">
-  <form>
+  <form action="/enrollinsert" method="post">
+      {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="field1">Full Name</label>
-        <input type="text" class="form-control" id="field1" placeholder="Enter Your Full Name">
+        <input type="text" class="form-control"  placeholder="Enter Your Full Name" name="fname">
       </div>
       <div class="form-group col-md-6">
         <label for="field2">Email Address</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter your Email Address">
+        <input type="text" class="form-control"  placeholder="Enter your Email Address" name="mail">
       </div>
 
          <div class="form-group col-md-6">
-        <label for="field2">Field 3</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <label for="field2">Physical Adress</label>
+        <input type="text" class="form-control"  placeholder="Enter Your Address" name="address">
       </div>
 
          <div class="form-group col-md-6">
-        <label for="field2">Field 4</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <label for="field2">Phone Number</label>
+        <input type="text" class="form-control"  placeholder="Enter Your Phone Number" name="pno">
       </div>
 
          <div class="form-group col-md-6">
-        <label for="field2">Field 5</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <label for="field2">National ID Number</label>
+        <input type="text" class="form-control"  placeholder="Enter Your ID Number" name="nid">
+      </div>
+
+
+         <div class="form-group col-md-6">
+        <label for="field2">Gender</label>
+        <select class="form-control" name="gender">
+            <option value="nosya">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+
+        </select>
       </div>
 
          <div class="form-group col-md-6">
-        <label for="field2">Field 6</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <label for="field2">Year of KCSE Examination</label>
+        <input type="text" class="form-control"  placeholder="Enter Your Year of Examination" name="yoe">
       </div>
 
-         <div class="form-group col-md-6">
-        <label for="field2">Field 7</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <div class="form-group col-md-6">
+        <label for="field2">Select course category</label>
+            <select class="form-control" name="coursecate">
+                <option value="select">Select course category</option>
+                <option value="pdh">DOCTOR OF PHILOSOPHY (PHD)</option>
+                <option value="md">MASTERS DEGREE</option>
+                <option value="ud">UNDERGRADUATE DEGREE</option>
+                <option value="hd">HIGHER DIPLOMA</option>
+                <option value="dip">DIPLOMA</option>
+                <option value="cert">CERTIFICATE</option>
+            </select>
       </div>
 
-         <div class="form-group col-md-6">
-        <label for="field2">Field 8</label>
-        <input type="text" class="form-control" id="field2" placeholder="Enter text for Field 2">
+        <div class="form-group col-md-6">
+        <label for="field2">Type of Course</label>
+            <select class="form-control" name="tcourse">
+                <option value="ds">Select type of Course</option>
+                <option value="ds">Data Science</option>
+                <option value="ci">COMPUTING AND INFORMATICS</option>
+                <option value="eng">ENGINEERING</option>
+            </select>
       </div>
+
+        <div class="form-group col-md-6">
+            <label> Upload Your Birth Certificate</label>
+            <input type="file" class="form-control" name="upbirth">
+        </div>
+
+         <div class="form-group col-md-6">
+            <label> Upload Your NAtional ID</label>
+            <input type="file" class="form-control" name="upid">
+        </div>
+
+         <div class="form-group col-md-6">
+            <label> Upload Your Results slip/KCSE Certificate</label>
+            <input type="file" class="form-control" name="upkcse">
+        </div>
 
     </div>
 
-    <!-- Repeat the above div for the remaining 12 fields -->
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
+    </div>
 
 <!-- Bootstrap JS and Popper.js (optional, but required for some Bootstrap features) -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
