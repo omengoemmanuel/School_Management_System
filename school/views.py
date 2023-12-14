@@ -108,26 +108,25 @@ def messageinsert(request):
 
 def enrollinsert(request):
     if request.method == "POST":
-        fname = request.POST.get('fname')
+        first_name = request.POST.get('firstname')
         mail = request.POST.get('mail')
         address = request.POST.get('address')
         pno = request.POST.get('pno')
         nid = request.POST.get('nid')
         gender = request.POST.get('gender')
         yoe = request.POST.get('yoe')
-        coursecate = request.POST.get('coursecate')
-        tcourse = request.POST.get('tcourse')
-        upbirth = request.POST.get('upbirth')
-        upid = request.POST.get('upid')
-        upkcse = request.POST.get('upkcse')
+        course_cate = request.POST.get('coursecate')
+        t_course = request.POST.get('tcourse')
 
         if len(request.FILES) != 0:
-            upbirth = request.FILES['upbirth']
-            upid = request.FILES['upid']
-            upkcse = request.FILES['upkcse']
-        query = enroll(fname=fname, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
-                       coursecate=coursecate, tcourse=tcourse, upbirth=upbirth, upid=upid, upkcse=upkcse)
+            up_birth = request.FILES['upbirth']
+            up_id = request.FILES['upid']
+            up_kcse = request.FILES['upkcse']
+        query = enroll(firstname=first_name, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
+                       coursecate=course_cate, tcourse=t_course, upbirth=up_birth, upid=up_id, upkcse=up_kcse)
         query.save()
+
+        return redirect("/enroll")
 
     return redirect("/enroll")
 

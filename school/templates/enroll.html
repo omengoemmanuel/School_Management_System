@@ -39,12 +39,12 @@ button{
 <div class="form1">
 
 <div class="container mt-5">
-  <form action="/enrollinsert" method="post">
+  <form action="/enrollinsert" method="post" enctype="multipart/form-data">
       {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="field1">Full Name</label>
-        <input type="text" class="form-control"  placeholder="Enter Your Full Name" name="fname">
+        <input type="text" class="form-control"  placeholder="Enter Your Full Name" name="firstname">
       </div>
       <div class="form-group col-md-6">
         <label for="field2">Email Address</label>
