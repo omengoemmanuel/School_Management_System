@@ -122,9 +122,10 @@ def enrollinsert(request):
             up_birth = request.FILES['upbirth']
             up_id = request.FILES['upid']
             up_kcse = request.FILES['upkcse']
-        query = enroll(firstname=first_name, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
-                       coursecate=course_cate, tcourse=t_course, upbirth=up_birth, upid=up_id, upkcse=up_kcse)
-        query.save()
+
+            query1 = enroll(first_name=first_name, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
+                            course_cate=course_cate, t_course=t_course, up_id=up_id, up_birth=up_birth, up_kcse=up_kcse)
+            query1.save()
 
         return redirect("/enroll")
 
