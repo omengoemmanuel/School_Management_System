@@ -28,7 +28,7 @@ class staffs(models.Model):
 
 
 class enroll(models.Model):
-    first_name = models.CharField(max_length=50, blank=False, null=False)
+    firstname = models.CharField(max_length=50, blank=False, null=False)
     mail = models.EmailField(blank=False, null=False)
     address = models.CharField(max_length=100, null=False, blank=False)
     pno = models.IntegerField(null=False, blank=False)
@@ -42,7 +42,7 @@ class enroll(models.Model):
     up_kcse = models.FileField(upload_to="upload/enrolls", default="upload/enroll/kcse.pdf")
 
     def __str__(self):
-        return self.first_name
+        return self.firstname
 
 # class CustomUser(AbstractUser):
 # f_name = models.CharField(max_length=20, blank=False, null=False)

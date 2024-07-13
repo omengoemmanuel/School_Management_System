@@ -108,7 +108,7 @@ def messageinsert(request):
 
 def enrollinsert(request):
     if request.method == "POST":
-        first_name = request.POST.get('firstname')
+        first_name1 = request.POST.get('firstname')
         mail = request.POST.get('mail')
         address = request.POST.get('address')
         pno = request.POST.get('pno')
@@ -123,7 +123,7 @@ def enrollinsert(request):
             up_id = request.FILES['upid']
             up_kcse = request.FILES['upkcse']
 
-            query1 = enroll(first_name=first_name, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
+            query1 = enroll(firstname=first_name1, mail=mail, address=address, pno=pno, nid=nid, gender=gender, yoe=yoe,
                             course_cate=course_cate, t_course=t_course, up_id=up_id, up_birth=up_birth, up_kcse=up_kcse)
             query1.save()
 
