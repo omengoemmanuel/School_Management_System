@@ -225,7 +225,7 @@ Overall, reading classes are instrumental in equipping students with the essenti
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="custom-media">
-              <a href="#"><img src="{% static 'images/img-school-2-min.jpg' %}" alt="Image" class="img-fluid"></a>
+              <a href="#"><img src="{% static 'images/Early childhood development education.jpg' %}" alt="Image" class="img-fluid"></a>
             <div class="custom-media-body">
               <div class="d-flex justify-content-between pb-3">
                 <div class="text-primary"><span class="uil uil-book-open"></span> <span>43 lesson</span></div>
@@ -356,42 +356,19 @@ Overall, reading classes are instrumental in equipping students with the essenti
 
           <h3 class="line-bottom mb-4">Testimonials</h3>
           <div class="owl-carousel wide-slider-testimonial">
+              {% for jh in testi %}
             <div class="item">
 
               <blockquote class="block-testimonial">
                 <p>
-                &ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                &ldquo;{{ jh.message }}&rdquo;</p>
                 <div class="author">
-                    <img src="{% static 'images/person_1.jpg' %}">
-                  <h3>John Doe</h3>
-                  <p class="position">CEO, Founder</p>
+                    <img src="/media/{{ jh.photo }}">
+                  <h3>{{ jh.name }}</h3>
+                  <p class="position">{{ jh.position }}</p>
                 </div>
               </blockquote>
-            </div>
-
-            <div class="item">
-              <blockquote class="block-testimonial">
-                <p>
-                &ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.&rdquo;</p>
-                <div class="author">
-                    <img src="{% static 'images/person_2.jpg' %}">
-                  <h3>James Woodland</h3>
-                  <p class="position">Designer at Facebook</p>
-                </div>
-              </blockquote>
-            </div>
-
-            <div class="item">
-              <blockquote class="block-testimonial">
-                <p>
-                &ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-                <div class="author">
-                    <img src="{% static 'images/person_3.jpg' %}">
-                  <h3>Rob Smith</h3>
-                  <p class="position">Product Designer at Twitter</p>
-                </div>
-              </blockquote>
-            </div>
+            </div> {% endfor %}
           </div>
 
         </div>
@@ -406,7 +383,7 @@ Overall, reading classes are instrumental in equipping students with the essenti
     <div class="container">
       <div class="row">
         <div class="col-lg-5 mr-auto mb-5 mb-lg-0"  data-aos="fade-up" data-aos-delay="0">
-            <img src="{% static 'images/img-school-5-min.jpg' %}" alt="image" class="img-fluid">
+            <img src="{% static 'images/why choose us.jpg' %}" alt="image" class="img-fluid">
         </div>
         <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100">
           <h3 class="line-bottom mb-4">Why Choose Us</h3>
@@ -422,7 +399,7 @@ Overall, reading classes are instrumental in equipping students with the essenti
                 <div class="accordion-body">
                   <div class="d-flex">
                     <div class="accordion-img mr-4">
-                        <img src="{% static 'images/img-school-1-min.jpg' %}" alt="Image" class="img-fluid">
+                        <img src="{% static 'images/Early childhood development education.jpg' %}" alt="Image" class="img-fluid">
                     </div>
                     <div>
                       <p>Good teaching begins with clear and effective communication. A skilled teacher can convey complex ideas in a way that is understandable to diverse learners. They encourage open dialogue, actively listen, and provide constructive feedback.s. </p>
@@ -441,7 +418,7 @@ Overall, reading classes are instrumental in equipping students with the essenti
                 <div class="accordion-body">
                   <div class="d-flex">
                     <div class="accordion-img mr-4">
-                        <img src="{% static 'images/img-school-2-min.jpg' %}" alt="Image" class="img-fluid">
+                        <img src="{% static 'images/Drawing and Creativity.jpg' %}" alt="Image" class="img-fluid">
                     </div>
                     <div>
                       <p>Good character is not a static trait but is cultivated and developed over time through consistent actions and choices. It forms the foundation for building positive relationships, fostering a healthy community, and contributing to a just and compassionate society.</p>
@@ -460,7 +437,6 @@ Overall, reading classes are instrumental in equipping students with the essenti
                 <div class="accordion-body">
                   <div class="d-flex">
                     <div class="accordion-img mr-4">
-                        <img src="{% static 'images/img-school-3-min.jpg' %}" alt="Image" class="img-fluid">
                     </div>
                     <div>
                       <p>Adapting this description to the specific practices, policies, and values of your organization will help convey a personalized and sincere commitment to the safety of the children under your care.</p>

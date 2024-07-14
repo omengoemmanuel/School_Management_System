@@ -44,6 +44,16 @@ class enroll(models.Model):
     def __str__(self):
         return self.firstname
 
+
+class testimonial(models.Model):
+    message = models.CharField(max_length=300, blank=False, null=False)
+    photo = models.ImageField(upload_to="upload/testimonials", default="upload/testimonial/photo.jpg")
+    name = models.CharField(max_length=30, blank=False, null=False)
+    position = models.CharField(max_length=100, blank=False, null=False)
+
+    def __str__(self):
+        return self.name
+
 # class CustomUser(AbstractUser):
 # f_name = models.CharField(max_length=20, blank=False, null=False)
 # m_name = models.CharField(max_length=20, blank=False, null=False)
