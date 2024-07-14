@@ -6,14 +6,14 @@
   <div class="untree_co-section bg-light">
     <div class="container">
 
-      <div class="row">
+      <div class="row"> 
           {% for slide in slides %}
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="0">
           <div class="staff text-center">
             <div class="mb-4"><img src="/media/{{ slide.image }}" alt="Image" class="img-fluid"></div>
             <div class="staff-body">
               <h3 class="staff-name">{{ slide.name }}</h3>
-              <span class="d-block position mb-4">Teacher in {{ slide.subject }}</span>
+              <span class="d-block position mb-4">Teacher of {{ slide.subject }}</span>
               <p class="mb-4">{{ slide.description }}.</p>
               <div class="social">
                 <a href="#" class="mx-2"><span class="icon-facebook"></span></a>
@@ -21,8 +21,8 @@
                 <a href="#" class="mx-2"><span class="icon-linkedin"></span></a>
               </div>
             </div>
-          </div> </div>
-        </div> {% endfor %}
+          </div> </div>{% endfor %}
+        </div>
       </div>
    <!-- /.untree_co-section -->
 
