@@ -58,6 +58,7 @@ class testimonial(models.Model):
 class ourteam(models.Model):
     photo = models.ImageField(upload_to="upload/our team", default="upload/our team/team.png")
     name = models.CharField(max_length=30, blank=False, null=False)
+    position = models.CharField(max_length=30, blank=False, null=True)
     description = models.CharField(max_length=500, blank=False, null=False)
 
     def __str__(self):

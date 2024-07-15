@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import messagess, gallery, staffs
-from .models import enroll, testimonial
+from .models import enroll, testimonial, ourteam
 
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -24,7 +24,8 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    team = ourteam.objects.all()
+    return render(request, 'about.html', {'navbar':'about', 'team':team})
 
 
 def contact(request):

@@ -45,14 +45,15 @@
           <p>Collaboration is at the heart of our success. We believe in the power of teamwork to accomplish tasks, drive projects forward, etc.</p>
         </div>
       </div>
+        {% for tm in team %}
       <div class="row">
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="0">
           <div class="staff text-center">
-              <div class="mb-4"><img src="{% static 'images/staff_1.jpg' %}" alt="Image" class="img-fluid"></div>
+              <div class="mb-4"><img src="/media/{{ tm.photo }}" alt="Image" class="img-fluid"></div>
             <div class="staff-body">
-              <h3 class="staff-name">Mina Collins</h3>
-              <span class="d-block position mb-4">Teacher in Math</span>
-              <p class="mb-4">Mathematics is not just a subject; it's a powerful tool that unlocks doors to understanding the world around us. Embracing math opens up pathways to problem-solving, critical thinking, and logical reasoning. It's the language of patterns, the key to unlocking the secrets of science, technology, engineering, and even art.</p>
+              <h3 class="staff-name">{{ tm.name }}</h3>
+              <span class="d-block position mb-4">{{ tm.position }}</span>
+              <p class="mb-4">{{ tm.description }}.</p>
               <div class="social">
                 <a href="https://www.facebook.com/" class="mx-2"><span class="icon-facebook"></span></a>
                 <a href="https://twitter.com/" class="mx-2"><span class="icon-twitter"></span></a>
@@ -61,7 +62,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> {% endfor %}
     </div>
   </div> <!-- /.untree_co-section -->
 
