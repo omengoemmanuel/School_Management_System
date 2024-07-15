@@ -45,8 +45,8 @@
           <p>Collaboration is at the heart of our success. We believe in the power of teamwork to accomplish tasks, drive projects forward, etc.</p>
         </div>
       </div>
-        {% for tm in team %}
-      <div class="row">
+
+      <div class="row"> {% for tm in team %}
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="0">
           <div class="staff text-center">
               <div class="mb-4"><img src="/media/{{ tm.photo }}" alt="Image" class="img-fluid"></div>
@@ -61,8 +61,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </div> {% endfor %}
+        </div>{% endfor %}
+      </div>
     </div>
   </div> <!-- /.untree_co-section -->
 
