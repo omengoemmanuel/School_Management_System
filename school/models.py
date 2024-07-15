@@ -54,6 +54,15 @@ class testimonial(models.Model):
     def __str__(self):
         return self.name
 
+
+class ourteam(models.Model):
+    photo = models.ImageField(upload_to="upload/our team", default="upload/our team/team.png")
+    name = models.CharField(max_length=30, blank=False, null=False)
+    description = models.CharField(max_length=500, blank=False, null=False)
+
+    def __str__(self):
+        return self.name
+
 # class CustomUser(AbstractUser):
 # f_name = models.CharField(max_length=20, blank=False, null=False)
 # m_name = models.CharField(max_length=20, blank=False, null=False)
