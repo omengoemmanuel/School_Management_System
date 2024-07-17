@@ -119,14 +119,14 @@ def enrollsinsert(request):
         yoe = request.POST.get('yoe')
         category = request.POST.get('category')
         course = request.POST.get('course')
+        upid = request.FILES['upid']
+        kcse = request.FILES['kcse']
 
-        if len(request.FILES) != 0:
-            upid = request.FILES['upid']
-            kcse = request.FILES['kcse']
+        print(f"Received data: {namee}, {email}, {address}, {phone}, {idno}, {gender}, {yoe}, {category}, {course}")
 
-            query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,
-                             category=category, course=course, upid=upid, kcse=kcse)
-            query5.save()
+        query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,category=category, course=course, upid=upid, kcse=kcse)
+
+        query5.save()
         return redirect("/enroll1")
     return redirect("/enroll1")
 

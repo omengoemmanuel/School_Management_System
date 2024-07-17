@@ -20,6 +20,6 @@ urlpatterns = [
 
 
     path('enroll1', views.enroll1),
-    path('enrollsinsert', views.enrollsinsert, name="enrollsinsert")
+    path('enrolls', views.enrollsinsert)
 
 ]
