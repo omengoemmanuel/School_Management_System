@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import messagess, gallery, staffs
-from .models import enroll, testimonial, ourteam
+from .models import enroll, testimonial, ourteam, enroll1
 
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -106,6 +106,30 @@ def messageinsert(request):
         query.save()
 
     return redirect("/contact")
+
+
+def enrollsinsert(request):
+    if request.method == "POST":
+        namee = request.POST.get('namee')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        phone = request.POST.get('phone')
+        idno = request.POST.get('idno')
+        gender = request.POST.get('gender')
+        yoe = request.POST.get('yoe')
+        category = request.POST.get('category')
+        course = request.POST.get('course')
+
+        if len(request.FILES) != 0:
+            upid = request.FILES['upid']
+            kcse = request.FILES['kcse']
+
+            query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,
+                             category=category, course=course, upid=upid, kcse=kcse)
+
+            query5.save()
+        return redirect("/enroll1")
+    return redirect("/enroll1")
 
 
 def enrollinsert(request):

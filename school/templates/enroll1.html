@@ -184,10 +184,11 @@ html, body {
                     <div class="form-items">
                         <h3>Register For a Course</h3>
                         <p>Fill in the data below.</p>
-                        <form class="requires-validation" novalidate>
+                        <form action="/enrollsinsert" method="post" class="requires-validation" novalidate>
+                            {% csrf_token %}
                             <div class="col-md-12">
                                 <label for="field1">Full name</label>
-                               <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                               <input class="form-control" type="text" name="namee" placeholder="Full Name" required>
                             </div>
 
                             <div class="col-md-12">
@@ -256,7 +257,7 @@ html, body {
 
                                <div class="col-md-12">
                                 <label for="field7">Upload National ID</label>
-                                <input class="form-control" type="file" name="id_no" placeholder="Upload ID" required>
+                                <input class="form-control" type="file" name="upid" placeholder="Upload ID" required>
                             </div>
                                 <div class="col-md-12">
                                 <label for="field7">Upload KCSE CERTIFICATE</label>
@@ -265,7 +266,8 @@ html, body {
 
 
                             <div class="form-button mt-3">
-                                <button>Submit</button>
+                                <button >Submit</button>
+
                             </div>
                         </form>
                     </div>

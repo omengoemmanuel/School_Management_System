@@ -45,6 +45,23 @@ class enroll(models.Model):
         return self.firstname
 
 
+class enroll1(models.Model):
+    namee = models.CharField(max_length=50, blank=False, null=False)
+    email = models.EmailField(blank=False, null=False)
+    address = models.CharField(max_length=50, blank=False, null=False)
+    phone = models.CharField(max_length=15, blank=False, null=False)
+    idno = models.CharField(max_length=10, blank=False, null=False)
+    gender = models.CharField(max_length=6, blank=False, null=False)
+    yoe = models.CharField(max_length=4, blank=False, null=False)
+    category = models.CharField(max_length=30, blank=False, null=False)
+    course = models.CharField(max_length=30, blank=False, null=False)
+    id_no = models.FileField(upload_to="upload/enrolls", default="upload/enrolls/id.pdf")
+    kcse = models.FileField(upload_to="upload/enrolls", default="upload/enrolls/kcse.pdf")
+
+    def __str__(self):
+        return self.namee
+
+
 class testimonial(models.Model):
     message = models.CharField(max_length=300, blank=False, null=False)
     photo = models.ImageField(upload_to="upload/testimonials", default="upload/testimonial/photo.jpg")

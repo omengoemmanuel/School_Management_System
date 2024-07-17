@@ -19,6 +19,7 @@ urlpatterns = [
     path('enrollinsert', views.enrollinsert, name="enrollinsert"),
 
 
-    path('enroll1', views.enroll1)
+    path('enroll1', views.enroll1),
+    path('enrollsinsert', views.enrollsinsert, name="enrollsinsert")
 
 ]
