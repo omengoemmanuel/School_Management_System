@@ -25,7 +25,7 @@ def home(request):
 
 def about(request):
     team = ourteam.objects.all()
-    return render(request, 'about.html', {'navbar':'about', 'team':team})
+    return render(request, 'about.html', {'navbar': 'about', 'team': team})
 
 
 def contact(request):
@@ -141,6 +141,10 @@ def student(request):
 
 def enroll(request):
     return render(request, 'enroll.html')
+
+
+def enroll1(request):
+    return render(request, 'enroll1.html')
 
 # class SignUp(CreateView):
 #   model = CustomUser

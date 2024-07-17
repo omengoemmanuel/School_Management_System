@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register</title>
+
+    <style>
+
+        /* Existing CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+*, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    height: 100%;
+    background-color: #152733;
+    overflow: hidden;
+}
+
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.form-content .form-items {
+    border: 3px solid #fff;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.form-content h3 {
+    color: #fff;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: #fff;
+}
+
+.form-content input[type=text],
+.form-content input[type=password],
+.form-content input[type=email],
+.form-content select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.btn-primary {
+    background-color: #6C757D;
+    outline: none;
+    border: 0px;
+    box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #495056;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.form-content textarea {
+    position: static !important;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    outline: none;
+    resize: none;
+    height: 120px;
+    transition: none;
+    margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: #8D8D8D;
+}
+
+.mv-up {
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+    color: #ff606e;
+}
+
+.valid-feedback {
+    color: #2acc80;
+}
+
+/* New CSS for three-column layout */
+.form-items form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* Space between the grid items */
+}
+
+.form-items .col-md-12 {
+    grid-column: span 1;
+    padding: 0 8px; /* Adding padding to separate the items */
+}
+
+.form-items .form-button {
+    grid-column: span 3;
+    text-align: center;
+}
+
+
+    </style>
+</head>
+<body>
+
+     <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Register Today</h3>
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" novalidate>
+                            <div class="col-md-12">
+                                <label for="field1">Full name</label>
+                               <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="field2">Email Address</label>
+                                <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                            </div>
+
+                             <div class="col-md-12">
+                                <label for="field3">Physical Address</label>
+                                <input class="form-control" type="text" name="address" placeholder="Physical Address" required>
+                            </div>
+
+                              <div class="col-md-12">
+                                <label for="field4">Phone Number</label>
+                                <input class="form-control" type="text" name="phone" placeholder="Phone Number" required>
+                            </div>
+
+                               <div class="col-md-12">
+                                <label for="field5">National ID Number</label>
+                                <input class="form-control" type="text" name="id_number" placeholder="ID NUMBER" required>
+                            </div>
+
+                           <div class="col-md-12">
+                               <label for="field6">Gender</label>
+                                <select class="form-select mt-3" required>
+                                      <option selected disabled value="">Gender</option>
+                                      <option value="male">Male</option>
+                                      <option value="female">Female</option>
+                               </select>
+                           </div>
+
+                              <div class="col-md-12">
+                                <label for="field7">Year of Examination</label>
+                                <input class="form-control" type="text" name="phone" placeholder="Year of Examination" required>
+                            </div>
+
+                             <div class="col-md-12">
+                               <label for="field8">Course Category</label>
+                                <select class="form-select mt-3" required>
+                                      <option selected disabled value="">Course Category</option>
+                                      <option value="phd">PHD</option>
+                                      <option value="masters">MASTERS DEGREE</option>
+                                    <OPTION value="degree">BACHELORS DEGREE</OPTION>
+                                    <OPTION value="higher_diploma">HIGHER DIPLOMA</OPTION>
+                                    <OPTION value="diploma">DIPLOMA</OPTION>
+                                    <OPTION value="certificate">CERTIFICATE</OPTION>
+                               </select>
+                           </div>
+
+                               <div class="col-md-12">
+                               <label for="field9">Type of Course</label>
+                                <select class="form-select mt-3" required>
+                                      <option selected disabled value="">Type of Course</option>
+                                    <option value="data science">DATA SCIENCE</option>
+                                    <option value="c.engineering">CIVIL ENGINEERING</option>
+                                    <option value="education scie">EDUCATION SCIENCE</option>
+                                    <option value="education art">EDUCATION ARTS</option>
+                                    <option value="b.arts">B.ARTS</option>
+                                    <option value="journalism">JOURNALISM</option>
+                                    <option value="medicine">MEDICINE</option>
+                                    <option value="comp. science">COMPUTER SCIENCE</option>
+                               </select>
+                           </div>
+
+                               <div class="col-md-12">
+                                <label for="field7">Upload National ID</label>
+                                <input class="form-control" type="file" name="phone" placeholder="Upload ID" required>
+                            </div>
+                                <div class="col-md-12">
+                                <label for="field7">Upload KCSE CERTIFICATE</label>
+                                <input class="form-control" type="file" name="phone" placeholder="Upload Certificate" required>
+                            </div>
+
+
+                            <div class="form-button mt-3">
+                                <button type="button" class="btn btn-primary">REGISTER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
