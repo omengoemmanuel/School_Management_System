@@ -126,7 +126,6 @@ def enrollsinsert(request):
 
             query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,
                              category=category, course=course, upid=upid, kcse=kcse)
-
             query5.save()
         return redirect("/enroll1")
     return redirect("/enroll1")
