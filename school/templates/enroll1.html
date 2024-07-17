@@ -18,11 +18,12 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 html, body {
     height: 100%;
-    background-color: #152733;
+    background-color: skyblue;
     overflow: hidden;
 }
 
@@ -181,7 +182,7 @@ html, body {
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Register Today</h3>
+                        <h3>Register For a Course</h3>
                         <p>Fill in the data below.</p>
                         <form class="requires-validation" novalidate>
                             <div class="col-md-12">
@@ -204,14 +205,16 @@ html, body {
                                 <input class="form-control" type="text" name="phone" placeholder="Phone Number" required>
                             </div>
 
-                               <div class="col-md-12">
-                                <label for="field5">National ID Number</label>
-                                <input class="form-control" type="text" name="id_number" placeholder="ID NUMBER" required>
+                              <div class="col-md-12">
+                                <label for="field4">ID NUMBER</label>
+                                <input class="form-control" type="text" name="idno" placeholder="ID Number" required>
                             </div>
+
+
 
                            <div class="col-md-12">
                                <label for="field6">Gender</label>
-                                <select class="form-select mt-3" required>
+                                <select class="form-select mt-3" name="gender" required>
                                       <option selected disabled value="">Gender</option>
                                       <option value="male">Male</option>
                                       <option value="female">Female</option>
@@ -220,12 +223,12 @@ html, body {
 
                               <div class="col-md-12">
                                 <label for="field7">Year of Examination</label>
-                                <input class="form-control" type="text" name="phone" placeholder="Year of Examination" required>
+                                <input class="form-control" type="text" name="yoe" placeholder="Year of Examination" required>
                             </div>
 
                              <div class="col-md-12">
                                <label for="field8">Course Category</label>
-                                <select class="form-select mt-3" required>
+                                <select class="form-select mt-3" name="category" required>
                                       <option selected disabled value="">Course Category</option>
                                       <option value="phd">PHD</option>
                                       <option value="masters">MASTERS DEGREE</option>
@@ -238,7 +241,7 @@ html, body {
 
                                <div class="col-md-12">
                                <label for="field9">Type of Course</label>
-                                <select class="form-select mt-3" required>
+                                <select class="form-select mt-3" name="course" required>
                                       <option selected disabled value="">Type of Course</option>
                                     <option value="data science">DATA SCIENCE</option>
                                     <option value="c.engineering">CIVIL ENGINEERING</option>
@@ -253,16 +256,16 @@ html, body {
 
                                <div class="col-md-12">
                                 <label for="field7">Upload National ID</label>
-                                <input class="form-control" type="file" name="phone" placeholder="Upload ID" required>
+                                <input class="form-control" type="file" name="id_no" placeholder="Upload ID" required>
                             </div>
                                 <div class="col-md-12">
                                 <label for="field7">Upload KCSE CERTIFICATE</label>
-                                <input class="form-control" type="file" name="phone" placeholder="Upload Certificate" required>
+                                <input class="form-control" type="file" name="kcse" placeholder="Upload Certificate" required>
                             </div>
 
 
                             <div class="form-button mt-3">
-                                <button type="button" class="btn btn-primary">REGISTER</button>
+                                <button>Submit</button>
                             </div>
                         </form>
                     </div>
