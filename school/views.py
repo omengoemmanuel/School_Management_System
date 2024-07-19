@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from .models import messagess, gallery, staffs
 from .models import enroll, testimonial, ourteam, enroll1
 
@@ -124,7 +124,8 @@ def enrollsinsert(request):
 
         print(f"Received data: {namee}, {email}, {address}, {phone}, {idno}, {gender}, {yoe}, {category}, {course}")
 
-        query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,category=category, course=course, upid=upid, kcse=kcse)
+        query5 = enroll1(namee=namee, email=email, address=address, phone=phone, idno=idno, gender=gender, yoe=yoe,
+                         category=category, course=course, upid=upid, kcse=kcse)
 
         query5.save()
         return redirect("/enroll1")
