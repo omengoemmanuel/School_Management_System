@@ -21,7 +21,7 @@ urlpatterns = [
 
     path('enroll1', views.enroll1),
     path('enrolls', views.enrollsinsert),
-    path('dashboard', views.dashboard)
+
 
 
 
