@@ -170,6 +170,10 @@ def enroll(request):
 def enroll1(request):
     return render(request, 'enroll1.html')
 
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
 # class SignUp(CreateView):
 #   model = CustomUser
 #  form_class = CustomUserCreationForm
