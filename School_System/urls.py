@@ -21,5 +21,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('omengo/', admin.site.urls),
-    path('', include("school.urls"))
+    path('', include("school.urls")),
+    path('', include("dashboard.urls"))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
